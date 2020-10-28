@@ -102,7 +102,7 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
+  max-width: 2560px;
   width: 86%; 
   margin: 0 auto;
 }
@@ -193,9 +193,11 @@ form div {
 }
 
 input, label {
+  width: 50%;
   color: rgb(243, 54, 86);
   font-family: 'Syne Tactile', cursive;
   font-weight: 900px;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -243,6 +245,7 @@ ul li {
 .list_body {
   color: rgb(243, 54, 86);
   font-family: 'Syne Tactile', cursive;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -255,6 +258,10 @@ ul li button{
   font-size: 12px;
   font-weight: 900px;
   text-transform: capitalize;
+}
+
+ul li button:focus {
+  outline: none;
 }
 
 ul li button:hover {
@@ -286,9 +293,55 @@ ul li button:hover {
 =================================*/ 
 
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*media query for 1224px starts here*/
+@media only screen and (max-width: 1224px) {
+  .list_head li {
+    font-size: 12px;
+  }
 
+  .list_body li {
+    font-size: 8px;
+  }
 
+  label {
+    font-size: 12px;
+  }
+
+}  
+
+/*media query for 1078px starts here*/
+@media only screen and (max-width: 1078px) {
+  .container {
+    min-width: 320px;
+  }
+
+  .form .wrapper {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  form, .list {
+    width: 100%;
+  }
+
+  form div {
+    width: 40%;
+    margin: 10px auto;
+    flex-wrap: wrap;
+  }
+
+  input, label {
+    width: 100%;
+    text-align: left;
+  }
+
+  input[type='text'] {
+    width: 60%;
+  }
+
+  input[type='submit'], input[type='button'] {
+    font-size: 12px;
+    text-align: left;
+  }
 
 }  
