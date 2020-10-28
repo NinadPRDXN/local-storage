@@ -14,7 +14,7 @@ save_container = document.querySelector('.save_container'), //Save Conatiner
 clear = document.querySelector('.clear'), //Clear Button 
 list = document.querySelector('.list'), //List of Items
 listBody = document.querySelector('.list_body'), //List Body
-letters = /^[A-Za-z]+[A-Za-z0-9]+$/, //Letters
+letters = /^[A-Za-z0-9]+$/, //Letters
 num = /^[0-9]+$/; //Numbers
 
 //Blocking form functionality 
@@ -49,14 +49,14 @@ save.onclick = saveData;
 
 function saveData() {
     checking();
-    iname = item_name.value;
-    iquantity = item_quantity.value;
+    var iname = item_name.value,iquantity = item_quantity.value;
     if (!letters.test(iname)) {
         modal.style.transform = 'translateY(0%)';
-        
+        modal_message.innerHTML = 'Item Name Should Not Be Blank';
     }
     else if (!num.test(iquantity)) {
-        alert('hello2');
+        modal.style.transform = 'translateY(0%)';
+        modal_message.innerHTML = 'Item Quantity Should Not Be Blank and Must be a Number';
     }
     else {
         storage = JSON.parse(localStorage['users']);
@@ -92,11 +92,21 @@ function edit(pivot) {
 //Update the Data in local storage
 function modify(index) {
     var iname = item_name.value, iquantity = item_quantity.value, storage = JSON.parse(localStorage['users']);
+    if (!letters.test(iname)) {
+        modal.style.transform = 'translateY(0%)';
+        modal_message.innerHTML = 'Item Name Should Not Be Blank';
+    }
+    else if (!num.test(iquantity)) {
+        modal.style.transform = 'translateY(0%)';
+        modal_message.innerHTML = 'Item Quantity Should Not Be Blank and Must be a Number';
+    }
+    else {
     storage.splice(index, 1, '{"itemName": "' + iname + '","itemQuantity": "' + iquantity + '"}');
     add(storage);
     form.reset();
     save_container.innerHTML = '<input type="submit" onclick="saveData()" value="save">';
     display();
+    }
 }
 
 //Delete the Data
