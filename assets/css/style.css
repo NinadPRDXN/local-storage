@@ -130,7 +130,7 @@ li {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
   transition: all 1s ease;
 }
 
@@ -313,6 +313,19 @@ ul li button:hover {
 @media only screen and (max-width: 1078px) {
   .container {
     min-width: 320px;
+  }
+
+  .modal_content {
+    width: 70%;
+  }
+
+  .close_btn {
+    font-size: 20px;
+  }
+
+  .modal_message {
+    width: 80%;
+    font-size: 10px;
   }
 
   .form .wrapper {
