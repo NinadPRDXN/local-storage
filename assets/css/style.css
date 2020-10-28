@@ -83,6 +83,7 @@ sub { bottom: -.25em; }
 
 /*for all*/
 body {
+  background-color: rgb(240, 128, 128);
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -119,7 +120,24 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.form .wrapper {
+  height: 100vh;
+  display: flex;
+}
+.wrapper {
+  background-color: rgb(255, 255, 255);
+}
 
+form, .list {
+  width: 50%;
+}
+form {
+  margin: 10% 0 0; 
+}
+
+input, label {
+  text-transform: capitalize;
+}
 
 
 
