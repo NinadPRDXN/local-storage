@@ -82,7 +82,10 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+
 body {
+  background-color: rgb(240, 128, 128);
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -119,7 +122,144 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.capital {
+  text-transform: capitalize;
+}
 
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+}
+
+.modal_content {
+  width: 30%;
+  height: 30%;
+  position: relative;
+  left: 50%;
+  background-color: rgb(255, 0, 43);
+  transform: translate(-50%, -100%);
+  transition: all 1s ease;
+}
+
+.close_btn {
+  position: absolute;
+  right: 16px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.close_btn:hover {
+  color: rgb(0, 0, 0);
+}
+
+.modal_message {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgb(255, 255, 255);
+  font-family: 'Syne Tactile', cursive;
+  font-weight: 900;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  word-wrap: break-word;
+}
+
+.form .wrapper {
+  height: 100vh;
+  display: flex;
+}
+.wrapper {
+  background-color: rgb(255, 255, 255);
+}
+
+form, .list {
+  width: 50%;
+}
+
+form {
+  margin: 5% 2% 0; 
+}
+
+form div {
+  width: 65%;
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+
+input, label {
+  color: rgb(243, 54, 86);
+  font-family: 'Syne Tactile', cursive;
+  font-weight: 900px;
+  text-transform: capitalize;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='text'] {
+  border: 2px solid rgb(240, 128, 128);
+  border-radius: 10px;
+}
+
+input[type='submit'], input[type='button'] {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: transparent;
+  color: rgb(243, 54, 86);
+  font-size: 16px;
+  font-weight: 900px;
+}
+
+input[type='submit']:hover, input[type='button']:hover {
+  border: 2px solid rgb(240, 128, 128);
+}
+
+ul {
+  margin: 0 10px;
+  display: flex;
+}
+
+ul li {
+  width: 25%;
+  padding:5px;
+  border: 1px solid rgb(240, 128, 128);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.list_head li {
+  margin-top: 2%;
+  color: rgb(243, 54, 86);
+  font-family: 'Syne Tactile', cursive;
+}
+
+.list_body {
+  color: rgb(243, 54, 86);
+  font-family: 'Syne Tactile', cursive;
+  text-align: center;
+}
+
+ul li button{
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: transparent;
+  color: rgb(243, 54, 86);
+  font-family: 'Syne Tactile', cursive;
+  font-size: 12px;
+  font-weight: 900px;
+  text-transform: capitalize;
+}
+
+ul li button:hover {
+  border: 2px solid rgb(240, 128, 128);
+}
 
 
 
