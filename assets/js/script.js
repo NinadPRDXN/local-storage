@@ -22,12 +22,6 @@ form.onclick = (e) => {
     e.preventDefault();
 }
 
-//Assigning types of each input field 
-item_name.type = 'text';
-item_quantity.type = 'text';
-save.type = 'submit';
-clear.type = 'submit';
-
 //Display data of Local Storage
 document.onload = checking();
 
